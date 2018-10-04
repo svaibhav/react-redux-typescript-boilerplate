@@ -1,9 +1,9 @@
-import * as React from 'react';
+import * as React from "react";
 
-import logo from './logo.svg';
+import logo from "./logo.svg";
 
 export interface IHeaderProps {
-  appTitle?: string
+  appTitle?: string;
 }
 
 class Header extends React.Component<IHeaderProps> {
@@ -11,7 +11,9 @@ class Header extends React.Component<IHeaderProps> {
     return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">{this.props.appTitle || 'Welcome to React'}</h1>
+        <h1 className="App-title">
+          {this.props.appTitle || "Welcome to React"}
+        </h1>
       </header>
     );
   }
