@@ -11,16 +11,18 @@ class UserInfo extends React.Component<IUserInfo> {
     const { userInfo } = this.props;
     return (
       <table>
-        {Object.keys(userInfo).map(key => {
-          return (
-            <tr id={key}>
-              <td>
-                <strong>{key}</strong>
-              </td>
-              <td>{userInfo[key]}</td>
-            </tr>
-          );
-        })}
+        <tbody>
+          {Object.keys(userInfo).map(key => {
+            return (
+              <tr key={key}>
+                <td>
+                  <strong>{key}</strong>
+                </td>
+                <td>{userInfo[key]}</td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
     );
   }
