@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Route, NavLink, Switch } from "react-router-dom";
-import About from "../components/about/About";
-import Home from "../components/home/Home";
+import AboutPage from "../components/about/AboutPage";
+import HomePage from "../components/home/HomePage";
 import NotFound from "../components/error/NotFound";
+import UserInfo from "../components/user/UserInfo";
 
 class MyRoutes extends React.Component {
   public render() {
@@ -17,10 +18,15 @@ class MyRoutes extends React.Component {
           <NavLink activeStyle={activeStyle} to="/about">
             About
           </NavLink>
+          {" | "}
+          <NavLink activeStyle={activeStyle} to="/user">
+            User
+          </NavLink>
         </div>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/user" component={UserInfo} />
           <Route component={NotFound} />
         </Switch>
       </div>
